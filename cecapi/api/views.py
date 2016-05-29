@@ -5,6 +5,9 @@ from subprocess import call
 
 @api_view(http_method_names=['PUT'])
 def turn_on_tv(request):
+    """
+    Turns on the tv.
+    """
     send_vol_command("tvpower")
     return Response("tv turned on")
 
